@@ -718,3 +718,22 @@ textarea:focus {
     min-height: 170px;
   }
 }
+
+.form-status {
+  margin: 4px 0 0;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.form-status.success {
+  color: #138a43;
+}
+
+.form-status.error {
+  color: #c03434;
+}
+
+button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
