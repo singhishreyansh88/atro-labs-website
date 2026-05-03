@@ -13,7 +13,7 @@ const categories = [
   { title: "Wellness", icon: Leaf },
   { title: "Gastro Care", icon: HeartPulse },
   { title: "Pain Relief", icon: Activity },
-  { title: "Ayurveda", icon: Wind },
+  { title: "Respiratory Care", icon: Wind },
 ];
 
 function CategoryStrip() {
