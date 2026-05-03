@@ -96,15 +96,18 @@ function ContactSection() {
           <div className="contact-details">
             <div>
               <MapPin />
-              <span>ATRO Labs Pvt. Ltd., Your City, Country</span>
+              <span>Regd Off: 17, SR Compound, 452010
+                <br />
+                Corp Off: 102, Pushpanjali Appt. 1st Main 1st Cross, Near Canara Bank, Chamrajpet, Bangalore - 560018
+              </span>
             </div>
             <div>
               <Phone />
-              <span>+91 00000 00000</span>
+              <span>+91 7049591014, +91 9827275120</span>
             </div>
             <div>
               <Mail />
-              <span>info@atrolabs.com</span>
+              <span>atrolabs77@gmail.com</span>
             </div>
           </div>
         </div>

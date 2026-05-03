@@ -58,8 +58,16 @@ function ProductCategory() {
               transition={{ duration: 0.45, delay: index * 0.05 }}
             >
               <div className="listed-product-image">
-                Product Image
-              </div>
+                {product.image ? (
+                    <img
+                    src={product.image}
+                    alt={product.itemName}
+                    className="listed-product-img"
+                    />
+                ) : (
+                    <span>Product Image</span>
+                )}
+                </div>
 
               <div className="listed-product-content">
                 <h3>{product.itemName}</h3>

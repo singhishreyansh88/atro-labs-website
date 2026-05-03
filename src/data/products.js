@@ -1,3 +1,5 @@
+import d6cortImage from "../assets/products/d6cort.png";
+
 export const productCategories = [
   {
     id: 1,
@@ -135,12 +137,13 @@ export const products = [
     packaging: "Strip of 10 tablets",
     category: "wellness",
   },
-  {
+ {
     id: 14,
     itemName: "D6CORT TAB",
     composition: "Deflazacort 6mg tablet",
-    packaging: "Strip of 10 tablets",
+    packaging: "20 × 10 tablets",
     category: "general-medicines",
+    image: d6cortImage,
   },
   {
     id: 15,

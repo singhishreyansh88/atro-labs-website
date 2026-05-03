@@ -4,9 +4,9 @@ import { ArrowRight } from "lucide-react";
 function HeroSection() {
   return (
     <section className="hero-section">
-      <div className="container hero-grid">
+      <div className="container hero-grid hero-grid-background">
         <motion.div
-          className="hero-content"
+          className="hero-content hero-content-on-bg"
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
@@ -31,17 +31,7 @@ function HeroSection() {
           </div>
         </motion.div>
 
-        <motion.div
-          className="hero-image-wrap"
-          initial={{ opacity: 0, scale: 0.96 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8 }}
-        >
-          <div className="molecule-bg"></div>
-          <div className="hero-image-placeholder">
-            Product Images Placeholder
-          </div>
-        </motion.div>
+        <div className="hero-visual-space" aria-hidden="true"></div>
       </div>
     </section>
   );
