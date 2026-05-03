@@ -1,11 +1,7 @@
 import ProductsSection from "../components/ProductsSection";
 
 function Products() {
-  return (
-    <section className="page-section">
-      <ProductsSection />
-    </section>
-  );
+  return <ProductsSection />;
 }
 
 export default Products;

@@ -1,11 +1,12 @@
 import { Link, NavLink } from "react-router-dom";
+import logo from "../assets/atro-labs-logo.png";
 
 function Navbar() {
   return (
     <header className="navbar">
       <div className="nav-container">
         <Link to="/" className="logo-wrap">
-          <div className="logo-placeholder">ATRO <span>Labs</span></div>
+          <img src={logo} alt="ATRO Labs Logo" className="nav-logo" />
         </Link>
 
         <nav className="nav-links">

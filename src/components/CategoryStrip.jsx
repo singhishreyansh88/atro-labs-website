@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import {
   Stethoscope,
   Pill,
@@ -8,12 +9,36 @@ import {
 } from "lucide-react";
 
 const categories = [
-  { title: "Dermatology", icon: Stethoscope },
-  { title: "General Medicines", icon: Pill },
-  { title: "Wellness", icon: Leaf },
-  { title: "Gastro Care", icon: HeartPulse },
-  { title: "Pain Relief", icon: Activity },
-  { title: "Respiratory Care", icon: Wind },
+  {
+    title: "Dermatology",
+    slug: "dermatology",
+    icon: Stethoscope,
+  },
+  {
+    title: "General Medicines",
+    slug: "general-medicines",
+    icon: Pill,
+  },
+  {
+    title: "Wellness",
+    slug: "wellness",
+    icon: Leaf,
+  },
+  {
+    title: "Gastro Care",
+    slug: "gastro-care",
+    icon: HeartPulse,
+  },
+  {
+    title: "Pain Relief",
+    slug: "pain-relief",
+    icon: Activity,
+  },
+  {
+    title: "Respiratory Care",
+    slug: "respiratory-care",
+    icon: Wind,
+  },
 ];
 
 function CategoryStrip() {
@@ -24,10 +49,14 @@ function CategoryStrip() {
           const Icon = category.icon;
 
           return (
-            <div className="category-card" key={category.title}>
+            <Link
+              to={`/products/${category.slug}`}
+              className="category-card"
+              key={category.title}
+            >
               <Icon size={30} />
               <span>{category.title}</span>
-            </div>
+            </Link>
           );
         })}
       </div>

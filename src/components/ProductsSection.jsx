@@ -1,5 +1,7 @@
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { productCategories } from "../data/products";
+import { ArrowRight } from "lucide-react";
+import { productCategories, products } from "../data/products";
 
 function ProductsSection() {
   return (
@@ -11,23 +13,38 @@ function ProductsSection() {
         </div>
 
         <div className="products-grid">
-          {productCategories.map((product, index) => (
-            <motion.div
-              className="product-card"
-              key={product.id}
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.08 }}
-            >
-              <div className="product-image-placeholder">
-                Image Placeholder
-              </div>
+          {productCategories.map((category, index) => {
+            const count = products.filter(
+              (product) => product.category === category.slug
+            ).length;
 
-              <h3>{product.title}</h3>
-              <p>{product.description}</p>
-            </motion.div>
-          ))}
+            return (
+              <motion.div
+                className="product-card category-product-card"
+                key={category.id}
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.08 }}
+              >
+                <Link to={`/products/${category.slug}`}>
+                  <div className="product-image-placeholder">
+                    Image Placeholder
+                  </div>
+
+                  <div className="category-card-content">
+                    <span className="product-count">{count} Products</span>
+                    <h3>{category.title}</h3>
+                    <p>{category.description}</p>
+
+                    <span className="view-category-link">
+                      View Products <ArrowRight size={17} />
+                    </span>
+                  </div>
+                </Link>
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </section>
