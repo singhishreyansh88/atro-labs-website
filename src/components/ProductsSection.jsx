@@ -3,6 +3,22 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { productCategories, products } from "../data/products";
 
+import dermatImg from "../assets/category/dermat.jpg";
+import gastroImg from "../assets/category/gastro.jpg";
+import generalImg from "../assets/category/general.jpg";
+import painImg from "../assets/category/pain.jpg";
+import respiratoryImg from "../assets/category/respiratory.jpg";
+import wellnessImg from "../assets/category/wellness.jpg";
+
+const categoryImages = {
+  dermatology: dermatImg,
+  "general-medicines": generalImg,
+  wellness: wellnessImg,
+  "gastro-care": gastroImg,
+  "pain-relief": painImg,
+  "respiratory-care": respiratoryImg,
+};
+
 function ProductsSection() {
   return (
     <section className="section products-section" id="products">
@@ -28,8 +44,12 @@ function ProductsSection() {
                 transition={{ duration: 0.5, delay: index * 0.08 }}
               >
                 <Link to={`/products/${category.slug}`}>
-                  <div className="product-image-placeholder">
-                    Image Placeholder
+                  <div className="product-image-placeholder category-product-image-wrap">
+                    <img
+                      src={categoryImages[category.slug]}
+                      alt={category.title}
+                      className="category-product-image"
+                    />
                   </div>
 
                   <div className="category-card-content">
