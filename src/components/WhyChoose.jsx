@@ -1,25 +1,25 @@
 import { motion } from "framer-motion";
-import { Boxes, ShieldCheck, BadgeCheck, TrendingUp } from "lucide-react";
+import { ShieldCheck, Layers, Users, TrendingUp } from "lucide-react";
 
-const reasons = [
+const pillars = [
   {
-    title: "Wide Product Range",
-    text: "A growing range across healthcare and dermatology.",
-    icon: Boxes,
-  },
-  {
-    title: "Quality Focus",
-    text: "Products developed with quality at the core.",
+    title: "Quality First",
+    text: "Quality is never compromised. Every decision is guided by rigorous standards ensuring safety and dependable performance.",
     icon: ShieldCheck,
   },
   {
-    title: "Trusted Brand",
-    text: "Built on care, reliability, and customer confidence.",
-    icon: BadgeCheck,
+    title: "Unwavering Consistency",
+    text: "Every product is manufactured to deliver the exact same level of high quality, reliability, and clinical performance—every single time.",
+    icon: Layers,
   },
   {
-    title: "Growing Portfolio",
-    text: "Continuously expanding to support better health.",
+    title: "Long-Term Relationships",
+    text: "Committed to earning the trust of healthcare professionals, distributors, and partners through total transparency and mutual respect.",
+    icon: Users,
+  },
+  {
+    title: "Continuous Growth",
+    text: "Dedicated to continuous improvement, embracing deliberate innovations, and strengthening our capabilities over time.",
     icon: TrendingUp,
   },
 ];
@@ -29,26 +29,26 @@ function WhyChoose() {
     <section className="section why-section">
       <div className="container">
         <div className="section-heading">
-          <p className="section-label">Why Choose ATRO Labs</p>
-          <h2>Built for quality, care, and trust.</h2>
+          <p className="section-label">Our Values</p>
+          <h2>Built on decades of trust. Designed for today.</h2>
         </div>
 
         <div className="why-grid">
-          {reasons.map((reason, index) => {
-            const Icon = reason.icon;
+          {pillars.map((pillar, index) => {
+            const Icon = pillar.icon;
 
             return (
               <motion.div
                 className="why-card"
-                key={reason.title}
+                key={pillar.title}
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.08 }}
               >
                 <Icon size={34} />
-                <h3>{reason.title}</h3>
-                <p>{reason.text}</p>
+                <h3>{pillar.title}</h3>
+                <p>{pillar.text}</p>
               </motion.div>
             );
           })}

@@ -10,8 +10,8 @@ function Navbar() {
         </Link>
 
         <nav className="nav-links">
-          <NavLink to="/">Home</NavLink>
-          <NavLink to="/about">About</NavLink>
+          <NavLink to="/" end>Home</NavLink>
+          <NavLink to="/about">About Us</NavLink>
           <NavLink to="/products">Products</NavLink>
           <NavLink to="/contact">Contact</NavLink>
         </nav>
