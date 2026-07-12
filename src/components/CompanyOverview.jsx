@@ -13,27 +13,28 @@ function CompanyOverview() {
           transition={{ duration: 0.6 }}
         >
           <div>
-            <p className="section-label">Company Overview</p>
-            <h2>Growing healthcare with quality and care.</h2>
+            <p className="section-label">Our Mission</p>
+            <h2>Dependable healthcare accessible without compromise.</h2>
+            <p style={{ marginBottom: "16px" }}>
+              We combine deep industry understanding with a disciplined approach to product selection, ensuring that everything we offer reflects safety, consistency, and effectiveness.
+            </p>
             <p>
-              ATRO Labs is a healthcare and dermatology brand focused on
-              reliable products that support everyday wellness, treatment, and
-              personal care needs.
+              For us, the true measure of success is not market presence, but the confidence we earn through every product we deliver.
             </p>
           </div>
 
           <div className="overview-features">
             <div>
               <Building2 />
-              <span>Growing product portfolio</span>
+              <span>40+ Years Pharmaceutical Legacy</span>
             </div>
             <div>
               <BadgeCheck />
-              <span>Quality-driven approach</span>
+              <span>Disciplined Product Selection</span>
             </div>
             <div>
               <ShieldCheck />
-              <span>Trusted healthcare brand</span>
+              <span>Compliant Partner Manufacturing</span>
             </div>
           </div>
         </motion.div>
